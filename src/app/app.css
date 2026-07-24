@@ -1,0 +1,29 @@
+.app-shell {
+  min-height: 100vh;
+  background-color: var(--bg100);
+  color: var(--text100);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg200);
+  border-bottom: 1px solid var(--bg300);
+}
+
+.theme-toggle {
+  border: 1px solid var(--primary100);
+  background: var(--primary300);
+  color: var(--text100);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--primary100);
+  color: white;
+}

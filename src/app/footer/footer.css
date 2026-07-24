@@ -1,0 +1,95 @@
+footer{
+    background-color: var(--primary600);
+    height: 40vh;
+    padding: 1.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction :column;
+}
+
+.footerNavContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer nav{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.h1{
+    font-family: var(--instrument-font);
+    color: var(--primary100);
+    font-size: 4rem;
+    margin: 0;
+}
+
+.h2{
+    font-family: var(--inter-font);
+    color: var(--primary100);
+    font-size: 1rem;
+}
+
+.register-btn{
+    background-color: transparent;
+    color: var(--primary100);
+    border: 1px solid var(--primary100);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: var(--primary100);
+    color: var(--primary600);
+}
+
+.nav-btn {
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(var(--primary100), var(--primary100));
+    background-size: 0% 0.15em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active {
+    cursor: pointer;
+    background-size: 100% 0.15em;
+    background-position-x: 0%;
+}
+
+@media (max-width: 950px) {
+    footer{
+        height: auto;
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    footer nav{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 1rem;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+}
+

@@ -1,0 +1,36 @@
+<footer>    
+    <div>
+        <h1 class="h1">Contact us</h1>
+        <p class="h2">&#8594; <i>SomethingSomething&#64;gmail.com</i></p>
+    </div>
+        
+    <div class="footerNavContainer">
+        <nav class="footerNav">
+        
+            <a class="h2 nav-btn" routerLink="/home">Home</a>
+            <a class="h2 nav-btn" routerLink="/dashboard">Dashboard</a>
+            <a class="h2 nav-btn" routerLink="/careers">Careers</a>
+            <a class="h2 nav-btn Hide" routerLink="/CoursesPage">Courses</a>
+            <a class="h2 nav-btn" routerLink="/about">About</a>
+            
+            @if (isloading) {
+                <div style="cursor: pointer;">
+                    <a class="h2 RegisterBtn">Loading</a>
+                </div>
+            }
+
+            @else{
+                <div>
+                    @if (isauthenticated) {
+                        <a class="h2 register-btn" (click)="auth.logout()" >Logout</a>
+                    }
+                    @else {
+                        <a class="h2 register-btn" (click)="auth.loginWithRedirect()" >Login</a>
+                    }
+                </div>
+            }    
+        
+        </nav>
+    </div>
+    
+</footer>
