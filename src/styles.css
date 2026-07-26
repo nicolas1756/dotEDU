@@ -1,14 +1,30 @@
+@theme {
+  --primary100: var(--primary100);
+  --primary200: var(--primary200);
+  --primary300: var(--primary300);
+  --accent100: var(--accent100);
+  --accent200: var(--accent200);
+  --text100: var(--text100);
+  --text200: var(--text200);
+  --bg100: var(--bg100);
+  --bg200: var(--bg200);
+  --bg300: var(--bg300);
+}
+
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geomini:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 @layer base {
   .theme-default {
-    --primary800: #070707;
-    --primary600: #3F51B5;
-    --primary400: #757de8;
+    --primary800: #070c2d;
+    --primary600: #4382ff;
+    --primary400: #bbdeff;
     --primary100: #ffffff;
-    --accent100: #2196F3;
-    --accent200: #003f8f;
+    --accent400: #9efaa2;
+    --accent100: #68ff77;
     --text100: #333333;
     --text200: #5c5c5c;
     --bg100: #FFFFFF;
@@ -36,8 +52,10 @@
     color: var(--text100);
     transition: background-color 0.2s ease, color 0.2s ease;
 
+    --alata-font: 'Alata', sans-serif;
     --instrument-font: 'Instrument Serif', serif;
     --inter-font: 'Inter', sans-serif;
+    --jetbrains-font: 'JetBrains Mono', monospace;
 
     .primary-btn {
         background-color: var(--primary600);
@@ -46,7 +64,7 @@
         padding: 0.5rem 1rem;
         border-radius: 100px;
         cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .primary-btn:hover {
@@ -61,7 +79,7 @@
         padding: 0.5rem 1rem;
         border-radius: 100px;
         cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .secondary-btn:hover {
@@ -90,17 +108,6 @@
   }
 }
 
-@theme {
-  --primary100: var(--primary100);
-  --primary200: var(--primary200);
-  --primary300: var(--primary300);
-  --accent100: var(--accent100);
-  --accent200: var(--accent200);
-  --text100: var(--text100);
-  --text200: var(--text200);
-  --bg100: var(--bg100);
-  --bg200: var(--bg200);
-  --bg300: var(--bg300);
-}
+
 
 

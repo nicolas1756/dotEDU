@@ -1,12 +1,5 @@
 <div class="app-shell" [class.theme-default]="theme === 'default'" [class.theme-professional]="theme === 'professional'">
   
-  <header class="top-bar">
-    <h1>{{ title() }}</h1>
-    <button type="button" class="theme-toggle" (click)="toggleTheme()">
-      {{ theme === 'default' ? 'Switch to Professional' : 'Switch to Default' }}
-    </button>
-  </header>
-
   <router-outlet></router-outlet>
 
 </div>

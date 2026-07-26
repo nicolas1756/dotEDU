@@ -1,0 +1,102 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.474);
+    top: 0;
+    z-index: 1000;
+}
+
+
+header div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction :column;
+}
+
+.footerNavContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header nav{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.h1{
+    font-family: var(--instrument-font);
+    color: var(--primary600);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.h2{
+    font-family: var(--inter-font);
+    color: var(--primary100);
+    font-size: 1rem;
+}
+
+.register-btn{
+    background-color: transparent;
+    color: var(--primary100);
+    background-color: var(--primary600);
+    border: 1px solid var(--primary600);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: var(--primary800);
+    color: var(--primary100);
+}
+
+.nav-btn {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary600) !important;
+    background-image: linear-gradient(var(--primary600), var(--primary600));
+    background-size: 0% 0.15em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active {
+    cursor: pointer;
+    background-size: 100% 0.15em;
+    background-position-x: 0%;
+}
+
+@media (max-width: 950px) {
+    footer{
+        height: auto;
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    footer nav{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 1rem;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+}
+

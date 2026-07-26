@@ -1,44 +1,74 @@
 
+<app-header></app-header>
+
+
 <section class="hero">
+
+    @for (item of Array(10); track $index) {
+        <img class="star" src="https://cdn.vectorstock.com/i/500p/16/54/four-pointed-star-icon-vector-48851654.jpg" />
+    }
     
     <div class="hero-content">
-        <h1 class="highlight">Flexible & Accessible</h1>
-        <h2>Master new skills with our top-rated online courses, anytime, anywhere.</h2>
+        <h1>Fool-proof LMS for a seamless learning experience</h1>
 
         <div class="hero-buttons">
-            <a routerLink="/signup" class="primary-btn">Get Started</a>
-            <a routerLink="/courses" class="secondary-btn">Explore Courses</a>
+            <a routerLink="/signup" class="primary-btn">Register</a>
+            <a (click)="scrollToPlans()" class="secondary-btn">Explore plans</a>
         </div>
     </div>
 
 </section>
 
 <section class="popular-courses">
-    <div class="carousel-header">
-        <h1>Popular Courses</h1>
-    </div>
 
     <div class="course-carousel">
         <button type="button" class="carousel-btn" aria-label="Show previous course" (click)="scrollToRelativeCard(-1)">←</button>
 
         <div class="course-track" #track>
-            <article
-                #courseCard
-                class="course-card"
-                *ngFor="let course of popularCourses; let i = index"
-                (click)="scrollToCard(i)"
-                [style.background-color]="course.color"
-            >
-                <img [src]="course.imageUrl" [alt]="course.title">
-                <div class="course-body">
-                    <h2>{{ course.title }}</h2>
-                    <p>{{ course.description }}</p>
-                </div>
-            </article>
+            
+            @for(course of popularCourses; track $index) {
+                <article
+                    #courseCard
+                    class="course-card"
+                    (click)="scrollToCard($index)"
+                    [style.background-color]="course.color"
+                >
+                    <img [src]="course.imageUrl" [alt]="course.title">
+                    <div class="course-body">
+                        <h2>{{ course.title }}</h2>
+                        <p>{{ course.description }}</p>
+                    </div>
+                </article>
+            }
+
         </div>
 
         <button type="button" class="carousel-btn" aria-label="Show next course" (click)="scrollToRelativeCard(1)">→</button>
     </div>
+</section>
+
+<section id="pricingPlans" class="pricing-section">
+
+    <h1 class="h1">Pricing Plans</h1>
+
+    <div class="pricing-content">
+
+        <div class="pricing-card" *ngFor="let plan of pricingPlans">
+            <h2>{{ plan.title }}</h2>
+            <p class="price">{{ plan.price }}/mth</p>
+            <ul>
+                @for (feature of plan.features; track feature) {
+                    <li>{{ feature }}</li>
+                }
+            </ul>
+            <a routerLink="/signup" class="primary-btn">Sign Up</a>
+
+        </div>
+
+    </div>
+
+    
+
 </section>
 
 <app-footer></app-footer>
