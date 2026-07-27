@@ -16,11 +16,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geomini:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 
 @layer base {
   .theme-default {
     --primary800: #070c2d;
-    --primary600: #4382ff;
+    --primary600: #76afff;
     --primary400: #bbdeff;
     --primary100: #ffffff;
     --accent400: #9efaa2;
@@ -53,7 +54,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 
     --alata-font: 'Alata', sans-serif;
-    --instrument-font: 'Instrument Serif', serif;
+    --instrument-font: 'Gloock', serif;
     --inter-font: 'Inter', sans-serif;
     --jetbrains-font: 'JetBrains Mono', monospace;
 

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, afterNextRender, Component, ElementRef, Inject, PLATFORM_ID, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -12,11 +12,30 @@ import { Header } from '../header/header';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements AfterViewInit {
+export class Home {
   @ViewChild('track', { static: true }) trackRef!: ElementRef<HTMLElement>;
   @ViewChildren('courseCard') courseCardRefs!: QueryList<ElementRef<HTMLElement>>;
   protected readonly Array = Array;
-  constructor(@Inject(PLATFORM_ID) private readonly platformId: object, private readonly router: Router) {}
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: object, private readonly router: Router){
+    // This hook runs safely ONLY in the browser after the page renders
+    afterNextRender(() => {
+      const element = document.querySelector('.hero') as HTMLElement;
+      if (!element) return; // Guard clause in case element isn't found yet
+
+      document.querySelectorAll('.star').forEach((star) => {
+        const randomX = Math.random() * element.offsetWidth;
+        const randomY = Math.random() * element.offsetHeight + 200;
+        const randomSize = Math.random() * 5 + 15;
+
+        star.setAttribute(
+          'style', 
+          `left: ${randomX}px; visibility: visible; transform: rotate(${Math.random() * 360}deg); top: ${randomY}px; width: ${randomSize}px; height: ${randomSize}px;`
+        );
+      });
+    });
+  }
+
+
 
   activeIndex = 1;
 
@@ -98,15 +117,6 @@ export class Home implements AfterViewInit {
     document.getElementById('pricingPlans')?.scrollIntoView({ behavior: 'smooth' });
   }
 
-    ngAfterViewInit() {
-    const element = document.querySelector('.hero') as HTMLElement;
-    document.querySelectorAll('.star').forEach((star) => {
-      const randomX = Math.random() * element.offsetWidth;
-      const randomY = Math.random() * element.offsetHeight + 200;
-      const randomSize = Math.random() * 5 + 15;
 
-      star.setAttribute('style', `left: ${randomX}px; visibility: visible; transform: rotate(${Math.random() * 360}deg); top: ${randomY}px; width: ${randomSize}px; height: ${randomSize}px;`);
-    });
-  }
 }
 

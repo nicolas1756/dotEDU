@@ -29,6 +29,7 @@ footer nav{
 
 .h1{
     font-family: var(--instrument-font);
+    line-height: 70px;
     color: var(--primary100);
     font-size: 4rem;
     margin: 0;
