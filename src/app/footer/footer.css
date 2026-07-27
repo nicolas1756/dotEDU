@@ -28,7 +28,7 @@ footer nav{
 
 
 .h1{
-    font-family: var(--instrument-font);
+    font-family: var(--header-serif-font);
     line-height: 70px;
     color: var(--primary100);
     font-size: 4rem;
@@ -36,7 +36,7 @@ footer nav{
 }
 
 .h2{
-    font-family: var(--inter-font);
+    font-family: var(--body-sans-font);
     color: var(--primary100);
     font-size: 1rem;
 }

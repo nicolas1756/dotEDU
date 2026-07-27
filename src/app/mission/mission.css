@@ -19,7 +19,7 @@
     font-size: 1.5em;
     margin-bottom: 3rem;
     font-weight: bold;
-    font-family: 'Alata', sans-serif;
+    font-family: var(--header-serif-font);
  }
 
  .mission-content h2 {
@@ -27,13 +27,13 @@
      font-size: 1.25rem;
      margin-bottom: 1rem;
      text-align: left;
-     font-family: 'Instrument Serif', serif;
+     font-family: "Source Serif 4", serif;
  }
  
  .mission-content p {
      font-size: 1rem;
      line-height: 1.6;
      text-align: left;
-     font-family: 'Instrument Serif', serif;
+     font-family: "Source Serif 4", serif;
      margin-bottom: 1rem;
  }

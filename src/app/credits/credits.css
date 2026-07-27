@@ -7,13 +7,17 @@ section{
 }
 
 h1{
-    font-family: 'Alata', sans-serif;
+    font-family: var(--header-sans-font);
     color: var(--text100);
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0;
     margin-bottom: 0.8rem;
     text-align: center;
+}
+
+p{
+    font-family: var(--body-sans-font);
 }
 
 .creditsContainer{
@@ -29,7 +33,7 @@ h1{
 }
 
 .confetti {
-    z-index: 10;
+  z-index: 10;
   width: 15px;
   height: 15px;
   background-color: #f2d74e;

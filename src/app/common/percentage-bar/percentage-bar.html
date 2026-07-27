@@ -1,0 +1,6 @@
+<div class="progress-container" role="progressbar" [attr.aria-valuenow]="value" [attr.aria-valuemin]="0" [attr.aria-valuemax]="max">
+  <!-- The width is computed dynamically based on the percentage -->
+  <div class="progress-fill" [style.width.%]="(value / max) * 100">
+    <span class="progress-text">{{ ((value / max) * 100) | number:'1.0-0' }}%</span>
+  </div>
+</div>

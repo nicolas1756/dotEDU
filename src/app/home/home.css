@@ -19,7 +19,7 @@
 
 .hero h1 {
     line-height: 70px;
-    font-family: "Gloock", serif;
+    font-family: var(--header-serif-font);
     font-weight: 400;
     font-style: normal;
     color: var(--primary800);
@@ -32,7 +32,7 @@
 
 .hero h2 {
     margin-top: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--header-sans-font);
     color: var(--text100);
     font-size: 1rem;
     text-align: center;
@@ -64,7 +64,7 @@
 }
 
 .popular-courses h1 {
-    font-family: 'Instrument Serif', serif;
+    font-family: var(--header-sans-font);
     color: var(--text100);
     font-size: 2rem;
     margin: 0;
@@ -168,7 +168,7 @@
 }
 
 .course-card h2 {
-    font-family: var(--oxygen-font);
+    font-family: var(--header-sans-font);
     margin: 0;
     font-size: 1.25rem;
     font-weight: 600;
@@ -176,7 +176,7 @@
 }
 
 .course-card p {
-    font-family: var(--oxygen-font);
+    font-family: var(--body-sans-font);
     margin: 0;
     font-size: 1rem;
     color: var(--primary100);
@@ -255,7 +255,7 @@
 }
 
 .pricing-section h1 {
-    font-family: 'Alata', sans-serif;
+    font-family: var(--header-sans-font);
     color: var(--primary100);
     font-size: 2rem;
     margin: 0;
@@ -312,7 +312,7 @@
 
 
 .pricing-card h2{
-    font-family: var(--oxygen-font);
+    font-family: var(--header-sans-font);
     margin: 0;
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -322,14 +322,14 @@
 
 .pricing-card p{
     color: var(--primary100);
-    font-family: var(--oxygen-font);
+    font-family: var(--body-sans-font);
     margin-bottom: 1.25rem;
     text-decoration: underline;
 }
 
 .pricing-card ul {
     list-style-type: disc;
-    font-family: var(--oxygen-font);
+    font-family: var(--body-sans-font);
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;

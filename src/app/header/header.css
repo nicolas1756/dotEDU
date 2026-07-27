@@ -32,7 +32,7 @@ header nav{
 
 
 .h1{
-    font-family: var(--instrument-font);
+    font-family: var(--header-sans-font);
     color: var(--primary600);
     font-size: 1.25rem;
     font-weight: bold;
@@ -40,7 +40,7 @@ header nav{
 }
 
 .h2{
-    font-family: var(--inter-font);
+    font-family: var(--header-sans-font);
     color: var(--primary100);
     font-size: 1rem;
 }

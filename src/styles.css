@@ -12,11 +12,7 @@
 }
 
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geomini:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
 
 @layer base {
   .theme-default {
@@ -53,12 +49,14 @@
     color: var(--text100);
     transition: background-color 0.2s ease, color 0.2s ease;
 
-    --alata-font: 'Alata', sans-serif;
-    --instrument-font: 'Gloock', serif;
-    --inter-font: 'Inter', sans-serif;
-    --jetbrains-font: 'JetBrains Mono', monospace;
+    --header-serif-font: 'Gloock', serif;
+    --header-sans-font: 'Alata', sans-serif;
+    --body-sans-font: 'Alata', sans-serif;
+
+
 
     .primary-btn {
+        font-family: var(--body-sans-font);
         background-color: var(--primary600);
         color: var(--primary100);
         border: none;
@@ -74,6 +72,7 @@
     }
 
     .secondary-btn {
+        font-family: var(--body-sans-font);
         background-color: transparent;
         color: var(--primary600);
         border: 1px solid var(--primary600);
@@ -90,6 +89,7 @@
     }
 
     .link-btn {
+        font-family: var(--body-sans-font);
         text-decoration: none;
         background-image: linear-gradient(var(--primary600), var(--primary600));
         background-size: 0% 0.15em;
